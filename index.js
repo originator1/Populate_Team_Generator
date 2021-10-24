@@ -78,7 +78,12 @@ const questionIndex = async () => {
         );
         //pushing to empty teamMembers array
         teamMembers.push(newEngineer);
-        
+       
+        console.log(answers.name);
+        console.log(answers.id);
+        console.log(answers.email);
+        console.log(githubInput.github);
+
     };
     //intern question
     //constructing new Intern
@@ -105,10 +110,17 @@ const questionIndex = async () => {
 
 };
 
-questionIndex().then(console.log)
+const promptPop = async () => {
+    const logArray = await questionIndex();
+    logArray;
+    console.log(teamMembers); 
+};
+promptPop();
+
 //^^asking questions but returning undefined ater entering questions for any role
 
 //need to write(fs) to index.html file to generate page
+
 //need to add question to add teammate or finish and create team
 //question asking create new teammember or finish team in inquiry prompt??
 //if choose new teammember, send back to list of teammember options

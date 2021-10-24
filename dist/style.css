@@ -1,0 +1,17 @@
+.card {
+    margin-bottom: 5vh;
+    color: yellow;
+}
+cardBody {
+    display:flex;
+    flex-wrap: wrap;
+    
+}
+
+body {
+    background-color: yellow;
+}
+
+jumbotron {
+    color:#8C4E03;
+}
