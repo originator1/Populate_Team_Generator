@@ -186,8 +186,42 @@ const teamCard = (team) => {
 
 promptQuestions();
 
-//function repeatedly runs over and over with same teamMember data
-//--
+//writing file to index with base html template and inserting joined teamCardArr to card container div
+function generateTeam() {
+    console.log("New Members", teamMembers);
+    teamCard(teamMembers);
+    const joinedTeam = teamCardArr.join("");
+    console.log("Team Card Array", teamCardArr.join(""));
+  
+    const html = `
+    <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+      <link rel="stylesheet" type="text/css" href="style.css" />
+      <title>Document</title>
+  </head>
+  <body>
+      <div class="jumbotron jumbotron-fluid" style="background-color: #8C4E03; color: yellow;">
+          <div class="container">
+            <h1 class="display-4">My Team</h1>
+            <p class="lead">The dream team...</p>
+          </div>
+      </div>
+      <div class="card-body" id="cardContainer">
+      
+      ${joinedTeam};
+         
+      </div>
+  </body>
+  </html>
+    `;
+    fs.writeFileSync('./dist/index.html', html, 'utf-8');
+  }
 
 // const promptPop = async () => {
 //     const logArray = await questionIndex();
