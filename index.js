@@ -133,8 +133,8 @@ const teamCard = (team) => {
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">${teamMember.getName()}</h5>
-                    <p class="card-text">${teamMember.getId()}</p>
-                    <a href="mailto:${teamMember.getEmail()}">Email: ${teamMember.getEmail()}</a>
+                    <p class="card-text">ID: ${teamMember.getId()}</p>
+                    <p>Email: <a href="mailto:${teamMember.getEmail()}">${teamMember.getEmail()}</a></p>
                     <p>Office Number: ${teamMember.getOfficeNumber()}</p>
                 </div>
             </div>
@@ -151,9 +151,9 @@ const teamCard = (team) => {
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">${teamMember.getName()}</h5>
-                        <p class="card-text">${teamMember.getId()}</p>
-                        <a href="mailto:${teamMember.getEmail()}">Email: ${teamMember.getEmail()}</a>
-                        <a href="${teamMember.getGitHub()}">${teamMember.getGitHub()}</a>
+                        <p class="card-text">ID: ${teamMember.getId()}</p>
+                        <p>Email: <a href="mailto:${teamMember.getEmail()}">${teamMember.getEmail()}</a></p>
+                        <p>Github: <a href="${teamMember.getGitHub()}">${teamMember.getGitHub()}</a></p>
                     </div>
                 </div>
                     `;
@@ -169,8 +169,8 @@ const teamCard = (team) => {
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">${teamMember.getName()}</h5>
-                            <p class="card-text">${teamMember.getId()}</p>
-                            <a href="mailto:${teamMember.getEmail()}">Email: ${teamMember.getEmail()}</a>
+                            <p class="card-text">ID: ${teamMember.getId()}</p>
+                            <p>Email: <a href="mailto:${teamMember.getEmail()}">${teamMember.getEmail()}</a></p>
                             <p>School: ${teamMember.getSchool()}</p>
                         </div>
                     </div>
