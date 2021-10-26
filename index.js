@@ -134,7 +134,7 @@ const teamCard = (team) => {
                 <div class="card-body">
                     <h5 class="card-title">${teamMember.getName()}</h5>
                     <p class="card-text">${teamMember.getId()}</p>
-                    <p>Email: ${teamMember.getEmail()}</p>
+                    <a href="mailto:${teamMember.getEmail()}">Email: ${teamMember.getEmail()}</a>
                     <p>Office Number: ${teamMember.getOfficeNumber()}</p>
                 </div>
             </div>
@@ -152,8 +152,8 @@ const teamCard = (team) => {
                     <div class="card-body">
                         <h5 class="card-title">${teamMember.getName()}</h5>
                         <p class="card-text">${teamMember.getId()}</p>
-                        <p>Email: ${teamMember.getEmail()}</p>
-                        <p>Github: ${teamMember.getGitHub()}</p>
+                        <a href="mailto:${teamMember.getEmail()}">Email: ${teamMember.getEmail()}</a>
+                        <a href="${teamMember.getGitHub()}">${teamMember.getGitHub()}</a>
                     </div>
                 </div>
                     `;
@@ -170,7 +170,7 @@ const teamCard = (team) => {
                         <div class="card-body">
                             <h5 class="card-title">${teamMember.getName()}</h5>
                             <p class="card-text">${teamMember.getId()}</p>
-                            <p>Email: ${teamMember.getEmail()}</p>
+                            <a href="mailto:${teamMember.getEmail()}">Email: ${teamMember.getEmail()}</a>
                             <p>School: ${teamMember.getSchool()}</p>
                         </div>
                     </div>
